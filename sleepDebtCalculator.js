@@ -38,5 +38,13 @@ const getIdealSleepHours = () => {
   return idealHours * 7;
 };
 
-console.log(getActualSleepHours());
-console.log(getIdealSleepHours());
+const actualSleepHours = getActualSleepHours()
+const idealSleepHours = getIdealSleepHours()
+
+if (actualSleepHours === idealSleepHours) {
+  console.log('Perfect Sleep Amount Achieved')
+} else if (actualSleepHours > idealSleepHours)  {
+  console.log('You\'ve slept more than nessecsary')
+} else if (actualSleepHours < idealSleepHours)  {
+  console.log('Go to bed, you need more rest')
+}
